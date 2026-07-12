@@ -655,3 +655,30 @@ color:white;
 transform:translateY(-5px);
 
 }
+/* ======================================
+SCROLL ANIMATIONS
+====================================== */
+
+.service-card,
+.about-box,
+.timeline-item,
+.industry-grid div,
+.stat{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
