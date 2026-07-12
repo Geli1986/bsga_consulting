@@ -272,15 +272,17 @@ margin-bottom:28px;
 
 font-family:'Manrope',sans-serif;
 
-font-size:72px;
+font-size:clamp(42px,5vw,64px);
 
-line-height:1.08;
+line-height:1.15;
 
 color:white;
 
 margin-bottom:30px;
 
 font-weight:800;
+
+max-width:900px;
 
 }
 
