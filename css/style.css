@@ -608,3 +608,50 @@ HOW WE WORK
     line-height:1.8;
 
 }
+.industries{
+
+background:white;
+
+padding:120px 0;
+
+}
+
+.industry-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:25px;
+
+margin-top:60px;
+
+}
+
+.industry-grid div{
+
+padding:45px;
+
+background:#F8FAFC;
+
+border-radius:16px;
+
+font-size:22px;
+
+font-weight:600;
+
+text-align:center;
+
+transition:.3s;
+
+}
+
+.industry-grid div:hover{
+
+background:#0F4C81;
+
+color:white;
+
+transform:translateY(-5px);
+
+}
