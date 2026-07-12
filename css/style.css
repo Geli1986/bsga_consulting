@@ -754,7 +754,7 @@ margin-top:70px;
 
 .about-card{
 
-background:rgba(255,255,255,.06);
+background:rgba(255,255,255,.05);
 
 border:1px solid rgba(255,255,255,.10);
 
@@ -762,13 +762,11 @@ border-radius:24px;
 
 padding:50px;
 
-transition:.45s;
+backdrop-filter:blur(14px);
 
-backdrop-filter:blur(16px);
+transition:.4s;
 
-position:relative;
-
-overflow:hidden;
+height:100%;
 
 }
 .about-card::before{
@@ -810,11 +808,11 @@ transform:scaleX(1);
 }
 .about-card:hover{
 
-transform:translateY(-14px);
+transform:translateY(-12px);
 
-background:rgba(255,255,255,.09);
+background:rgba(255,255,255,.08);
 
-box-shadow:0 30px 70px rgba(0,0,0,.18);
+box-shadow:0 25px 60px rgba(0,0,0,.20);
 
 }
 .about-card i{
