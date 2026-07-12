@@ -682,3 +682,32 @@ SCROLL ANIMATIONS
     transform:translateY(0);
 
 }
+/* ======================================
+HERO ANIMATION
+====================================== */
+
+.hero-content{
+
+    animation:heroFade 1.3s ease;
+
+}
+
+@keyframes heroFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
