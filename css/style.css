@@ -287,6 +287,67 @@ animation:heroFade 1.2s ease forwards;
 opacity:0;
 
 }
+<div class="hero-right">
+
+    <div class="executive-card">
+
+        <span class="executive-label">
+
+            EXECUTIVE INSIGHT
+
+        </span>
+
+        <h3>
+
+            Helping organisations achieve sustainable growth through strategy, execution and innovation.
+
+        </h3>
+
+        <div class="metric">
+
+            <div>
+
+                <strong>Operational Excellence</strong>
+
+                <span>Business optimisation & process improvement</span>
+
+            </div>
+
+            <i class="fa-solid fa-gears"></i>
+
+        </div>
+
+        <div class="metric">
+
+            <div>
+
+                <strong>Project Delivery</strong>
+
+                <span>Complex initiatives delivered with confidence</span>
+
+            </div>
+
+            <i class="fa-solid fa-diagram-project"></i>
+
+        </div>
+
+        <div class="metric">
+
+            <div>
+
+                <strong>Artificial Intelligence</strong>
+
+                <span>Practical AI adoption for measurable impact</span>
+
+            </div>
+
+            <i class="fa-solid fa-brain"></i>
+
+        </div>
+
+    </div>
+
+</div>
 .hero-tag{
 
 display:inline-block;
