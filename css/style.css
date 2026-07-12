@@ -10,27 +10,23 @@ VARIABLES
 
 :root{
 
---primary:#071321;
+--primary:#081726;
 
 --secondary:#0F4C81;
 
---accent:#1E88E5;
+--accent:#3FA9F5;
 
---light:#F8FAFC;
+--background:#F6F8FB;
 
 --white:#FFFFFF;
 
---text:#2D3748;
+--text:#233042;
 
---text-light:#64748B;
+--text-light:#6A7B91;
 
---border:#E5EAF1;
+--border:#E7EDF5;
 
---shadow:0 20px 60px rgba(0,0,0,.08);
-
---radius:18px;
-
---transition:.35s ease;
+--success:#2BB673;
 
 }
 
@@ -453,7 +449,17 @@ background:white;
 color:var(--primary);
 
 }
+Trusted expertise across
 
+🏭 Manufacturing
+
+⚙ Engineering
+
+🏗 Construction
+
+💻 Technology
+
+🏛 Public Sector
 /* ==========================
 SECTION TITLES
 ========================== */
