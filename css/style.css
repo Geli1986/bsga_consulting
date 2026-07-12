@@ -1910,3 +1910,6 @@ opacity:1;
 transform:translateY(0);
 
 }
+.calendly-popup-btn{
+cursor:pointer;
+}
