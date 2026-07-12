@@ -362,10 +362,11 @@ gap:22px;
 
 flex-wrap:wrap;
 
+align-items:center;
+
 margin-top:10px;
 
 }
-
 .btn-primary{
 
 display:inline-flex;
