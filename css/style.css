@@ -723,6 +723,23 @@ transparent 70%
 pointer-events:none;
 
 }
+.about .section-header span{
+
+color:#61B8FF;
+
+}
+
+.about .section-header h2{
+
+color:white;
+
+}
+
+.about .section-header p{
+
+color:#D5E2F2;
+
+}
 .about-grid{
 
 display:grid;
