@@ -413,3 +413,216 @@ color:white;
 color:#D9E4F1;
 
 }
+/* ===================================================
+   SERVICES
+=================================================== */
+
+.services{
+
+padding:140px 0;
+
+background:#FFFFFF;
+
+}
+
+.services-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:35px;
+
+}
+
+.service-card{
+
+background:#FFFFFF;
+
+padding:45px;
+
+border-radius:20px;
+
+border:1px solid var(--border);
+
+box-shadow:0 10px 30px rgba(0,0,0,.04);
+
+transition:all .35s ease;
+
+}
+
+.service-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 25px 60px rgba(0,0,0,.10);
+
+border-color:#C7D9F4;
+
+}
+
+.service-icon{
+
+width:72px;
+
+height:72px;
+
+border-radius:18px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:#EEF5FF;
+
+color:var(--secondary);
+
+font-size:30px;
+
+margin-bottom:28px;
+
+transition:.35s;
+
+}
+
+.service-card:hover .service-icon{
+
+background:var(--secondary);
+
+color:white;
+
+transform:rotate(-8deg) scale(1.08);
+
+}
+
+.service-card h3{
+
+font-family:'Manrope',sans-serif;
+
+font-size:28px;
+
+color:var(--primary);
+
+margin-bottom:18px;
+
+}
+
+.service-card p{
+
+font-size:17px;
+
+color:var(--text-light);
+
+line-height:1.8;
+
+}
+
+/* ===================================================
+ABOUT
+=================================================== */
+
+.about{
+
+padding:150px 0;
+
+background:var(--primary);
+
+}
+
+.about-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:35px;
+
+margin-top:70px;
+
+}
+
+.about-card{
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:20px;
+
+padding:45px;
+
+transition:.35s;
+
+backdrop-filter:blur(12px);
+
+}
+
+.about-card:hover{
+
+transform:translateY(-10px);
+
+background:rgba(255,255,255,.08);
+
+}
+
+.about-card i{
+
+font-size:34px;
+
+color:#8EC5FF;
+
+margin-bottom:25px;
+
+}
+
+.about-card h3{
+
+font-family:'Manrope',sans-serif;
+
+font-size:28px;
+
+color:white;
+
+margin-bottom:18px;
+
+}
+
+.about-card p{
+
+color:#D7E3F3;
+
+line-height:1.8;
+
+}
+
+/* ===================================================
+COMMON CARD ANIMATION
+=================================================== */
+
+.service-card,
+.about-card{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:
+
+opacity .8s ease,
+
+transform .8s ease,
+
+box-shadow .35s ease;
+
+}
+
+.service-card.show,
+.about-card.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
