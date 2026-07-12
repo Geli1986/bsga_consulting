@@ -472,3 +472,50 @@ grid-template-columns:1fr;
 }
 
 }
+/* =====================================
+   Premium Icons
+===================================== */
+
+.service-icon{
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:18px;
+
+    background:#EEF5FF;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#0F4C81;
+
+    margin-bottom:28px;
+
+    transition:.35s;
+
+}
+
+.service-icon svg{
+
+    width:34px;
+
+    height:34px;
+
+    stroke-width:1.8;
+
+}
+
+.service-card:hover .service-icon{
+
+    background:#0F4C81;
+
+    color:white;
+
+    transform:rotate(-6deg) scale(1.08);
+
+}
