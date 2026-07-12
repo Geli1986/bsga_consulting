@@ -262,17 +262,51 @@ width:100%;
 
 .hero-container{
 
-display:flex;
+display:grid;
+
+grid-template-columns:55% 45%;
 
 align-items:center;
 
-justify-content:flex-start;
+gap:60px;
 
-min-height:100vh;
+}
 
-position:relative;
+.hero-right{
 
-z-index:2;
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.hero-illustration{
+
+width:100%;
+
+max-width:520px;
+
+animation:floatAnimation 6s ease-in-out infinite;
+
+filter:drop-shadow(0 40px 60px rgba(0,0,0,.35));
+
+}
+
+@keyframes floatAnimation{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
 
 }
 
