@@ -280,12 +280,13 @@ z-index:2;
 
 max-width:760px;
 
-padding-top:40px;
+padding-top:90px;
 
-padding-bottom:40px;
+animation:heroFade 1.2s ease forwards;
+
+opacity:0;
 
 }
-
 .hero-tag{
 
 display:inline-block;
