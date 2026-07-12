@@ -200,27 +200,31 @@ HERO
 
 .hero{
 
+position:relative;
+
 height:100vh;
 
-background:
-
-linear-gradient(
-
-rgba(7,19,33,.68),
-
-rgba(7,19,33,.72)
-
-),
-
-url("../images/hero.jpg");
-
-background-size:cover;
-
-background-position:center;
+min-height:850px;
 
 display:flex;
 
 align-items:center;
+
+background:
+linear-gradient(
+135deg,
+rgba(4,12,22,.82),
+rgba(7,19,33,.70)
+),
+url("../images/hero.jpg");
+
+background-size:cover;
+
+background-position:center center;
+
+background-repeat:no-repeat;
+
+overflow:hidden;
 
 }
 
