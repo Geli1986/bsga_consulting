@@ -19,8 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
             header.classList.remove("scrolled");
         }
 
-    });
-
     /* ===============================
        SCROLL ANIMATIONS
     =============================== */
@@ -155,6 +153,11 @@ const menu=document.querySelector(".nav-menu");
 const toggle=document.querySelector(".menu-toggle");
 
 const overlay=document.querySelector(".menu-overlay");
+    if(!menu || !toggle || !overlay){
+
+    return;
+
+}
 
 function closeMenu(){
 
@@ -194,4 +197,5 @@ document.querySelectorAll(".nav-menu a").forEach(link=>{
 
 link.addEventListener("click",closeMenu);
 
+});
 });
