@@ -2068,3 +2068,100 @@ transform:translateY(-6px);
 }
 
 }
+/*==================================================
+APPLE MOBILE MENU
+==================================================*/
+
+.menu-toggle{
+
+display:none;
+
+font-size:30px;
+
+color:#fff;
+
+cursor:pointer;
+
+z-index:2000;
+
+}
+
+@media(max-width:992px){
+
+.menu-toggle{
+
+display:block;
+
+}
+
+.btn-nav{
+
+display:none;
+
+}
+
+.nav-menu{
+
+position:fixed;
+
+top:0;
+
+right:-100%;
+
+width:320px;
+
+height:100vh;
+
+background:rgba(8,23,38,.96);
+
+backdrop-filter:blur(25px);
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:flex-start;
+
+padding:70px 45px;
+
+gap:30px;
+
+transition:.45s ease;
+
+box-shadow:-20px 0 60px rgba(0,0,0,.35);
+
+z-index:1500;
+
+}
+
+.nav-menu.active{
+
+right:0;
+
+}
+
+.nav-menu li{
+
+width:100%;
+
+}
+
+.nav-menu li a{
+
+font-size:26px;
+
+font-weight:600;
+
+width:100%;
+
+display:block;
+
+padding:10px 0;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+}
