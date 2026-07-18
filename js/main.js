@@ -146,3 +146,38 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+/*======================================
+APPLE MOBILE MENU
+======================================*/
+
+const menuToggle=document.querySelector(".menu-toggle");
+
+const navMenu=document.querySelector(".nav-menu");
+
+menuToggle.addEventListener("click",()=>{
+
+navMenu.classList.toggle("active");
+
+if(navMenu.classList.contains("active")){
+
+menuToggle.innerHTML='<i class="fa-solid fa-xmark"></i>';
+
+}else{
+
+menuToggle.innerHTML='<i class="fa-solid fa-bars"></i>';
+
+}
+
+});
+
+document.querySelectorAll(".nav-menu a").forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+navMenu.classList.remove("active");
+
+menuToggle.innerHTML='<i class="fa-solid fa-bars"></i>';
+
+});
+
+});
