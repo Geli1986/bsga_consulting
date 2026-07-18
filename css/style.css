@@ -2069,35 +2069,42 @@ transform:translateY(-6px);
 
 }
 /*==================================================
-APPLE MOBILE MENU
+APPLE PREMIUM MOBILE MENU
 ==================================================*/
 
 .menu-toggle{
+    display:none;
+    font-size:32px;
+    color:#fff;
+    cursor:pointer;
+    z-index:3000;
+    transition:.35s;
+}
 
-display:none;
+.menu-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    backdrop-filter:blur(10px);
+    opacity:0;
+    visibility:hidden;
+    transition:.45s;
+    z-index:1900;
+}
 
-font-size:30px;
-
-color:#fff;
-
-cursor:pointer;
-
-z-index:2000;
-
+.menu-overlay.active{
+    opacity:1;
+    visibility:visible;
 }
 
 @media(max-width:992px){
 
-.menu-toggle{
-
-display:block;
-
+.btn-nav{
+    display:none;
 }
 
-.btn-nav{
-
-display:none;
-
+.menu-toggle{
+    display:block;
 }
 
 .nav-menu{
@@ -2106,33 +2113,33 @@ position:fixed;
 
 top:0;
 
-right:-100%;
+right:-420px;
 
-width:320px;
+width:340px;
 
 height:100vh;
 
-background:rgba(8,23,38,.96);
-
-backdrop-filter:blur(25px);
+padding:120px 45px;
 
 display:flex;
 
 flex-direction:column;
 
-justify-content:center;
+justify-content:flex-start;
 
-align-items:flex-start;
+gap:35px;
 
-padding:70px 45px;
+background:rgba(8,23,38,.92);
 
-gap:30px;
+backdrop-filter:blur(35px);
 
-transition:.45s ease;
+-webkit-backdrop-filter:blur(35px);
 
-box-shadow:-20px 0 60px rgba(0,0,0,.35);
+box-shadow:-25px 0 70px rgba(0,0,0,.35);
 
-z-index:1500;
+transition:.55s cubic-bezier(.22,1,.36,1);
+
+z-index:2500;
 
 }
 
@@ -2144,23 +2151,51 @@ right:0;
 
 .nav-menu li{
 
-width:100%;
+opacity:0;
+
+transform:translateX(35px);
+
+transition:.45s;
 
 }
 
-.nav-menu li a{
+.nav-menu.active li{
 
-font-size:26px;
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+.nav-menu li:nth-child(1){transition-delay:.08s;}
+.nav-menu li:nth-child(2){transition-delay:.14s;}
+.nav-menu li:nth-child(3){transition-delay:.20s;}
+.nav-menu li:nth-child(4){transition-delay:.26s;}
+.nav-menu li:nth-child(5){transition-delay:.32s;}
+
+.nav-menu a{
+
+font-size:28px;
 
 font-weight:600;
 
-width:100%;
+color:white;
 
 display:block;
 
-padding:10px 0;
+padding:8px 0;
 
-border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav-menu a:hover{
+
+color:#74C3FF;
+
+}
+
+body.menu-open{
+
+overflow:hidden;
 
 }
 
