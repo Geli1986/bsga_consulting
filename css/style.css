@@ -143,9 +143,15 @@ height:56px;
 
 display:flex;
 
+align-items:center;
+
 gap:28px;
 
-align-items:center;
+list-style:none;
+
+margin:0;
+
+padding:0;
 
 }
 
@@ -1143,18 +1149,6 @@ box-shadow:0 12px 35px rgba(0,0,0,.25);
     width:auto;
 }
 
-.nav-menu{
-    display:flex !important;
-    flex-direction:row !important;
-    align-items:center;
-    justify-content:center;
-    gap:28px;
-    margin:0;
-    padding:0;
-    list-style:none;
-    flex:1;
-}
-
 .nav-menu li{
     display:block;
 }
@@ -2124,15 +2118,11 @@ APPLE PREMIUM MOBILE MENU
 
 position:fixed;
 
-top:0;
+top:80px;
 
-right:-420px;
+left:0;
 
-width:340px;
-
-height:100vh;
-
-padding:120px 45px;
+right:0;
 
 display:flex;
 
@@ -2140,38 +2130,52 @@ flex-direction:column;
 
 justify-content:flex-start;
 
-gap:35px;
+align-items:center;
 
-background:rgba(8,23,38,.92);
+background:#081726;
 
-backdrop-filter:blur(35px);
+padding:25px 0;
 
--webkit-backdrop-filter:blur(35px);
+gap:0;
 
-box-shadow:-25px 0 70px rgba(0,0,0,.35);
+transform:translateY(-120%);
 
-transition:.55s cubic-bezier(.22,1,.36,1);
+transition:.35s ease;
 
-z-index:2500;
+opacity:0;
+
+visibility:hidden;
+
+z-index:999;
 
 }
 
 .nav-menu.active{
 
-right:0;
+transform:translateY(0);
+
+opacity:1;
+
+visibility:visible;
 
 }
 
 .nav-menu li{
 
-opacity:0;
+width:100%;
 
-transform:translateX(35px);
-
-transition:.45s;
+text-align:center;
 
 }
+.nav-menu li a{
 
+display:block;
+
+width:100%;
+
+padding:18px;
+
+}
 .nav-menu.active li{
 
 opacity:1;
