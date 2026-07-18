@@ -929,3 +929,199 @@ onclick="Calendly.initPopupWidget({url:'https://calendly.com/angel-bajo-sanchez/
     </div>
 
 </footer>
+/*==================================================
+PREMIUM ANIMATIONS
+==================================================*/
+
+.fade-up{
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:
+
+opacity .9s ease,
+
+transform .9s ease;
+
+}
+
+.fade-up.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+.fade-left{
+
+opacity:0;
+
+transform:translateX(-70px);
+
+transition:.9s ease;
+
+}
+
+.fade-left.show{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+.fade-right{
+
+opacity:0;
+
+transform:translateX(70px);
+
+transition:.9s ease;
+
+}
+
+.fade-right.show{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+.zoom{
+
+opacity:0;
+
+transform:scale(.94);
+
+transition:.8s ease;
+
+}
+
+.zoom.show{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+    /*==================================================
+APPLE HERO
+==================================================*/
+
+.hero{
+
+overflow:hidden;
+
+position:relative;
+
+}
+
+.hero-glow{
+
+position:absolute;
+
+width:900px;
+
+height:900px;
+
+left:50%;
+
+top:50%;
+
+transform:translate(-50%,-50%);
+
+background:
+
+radial-gradient(circle,
+
+rgba(63,169,245,.22),
+
+transparent 70%);
+
+filter:blur(40px);
+
+animation:glowMove 10s ease-in-out infinite;
+
+pointer-events:none;
+
+z-index:0;
+
+}
+
+.hero-grid{
+
+position:absolute;
+
+inset:0;
+
+background-image:
+
+linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+
+linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+
+background-size:70px 70px;
+
+mask-image:linear-gradient(to bottom, black, transparent);
+
+opacity:.4;
+
+pointer-events:none;
+
+}
+
+.hero-overlay{
+
+position:relative;
+
+z-index:2;
+
+}
+    @keyframes glowMove{
+
+0%{
+
+transform:translate(-50%,-50%) scale(1);
+
+}
+
+50%{
+
+transform:translate(-48%,-52%) scale(1.12);
+
+}
+
+100%{
+
+transform:translate(-50%,-50%) scale(1);
+
+}
+
+}
+   ::selection{
+
+background:#3FA9F5;
+
+color:white;
+
+}
+
+html{
+
+scroll-padding-top:100px;
+
+}
+
+body{
+
+text-rendering:optimizeLegibility;
+
+-webkit-font-smoothing:antialiased;
+
+-moz-osx-font-smoothing:grayscale;
+
+} 
