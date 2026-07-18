@@ -27,7 +27,7 @@ VARIABLES
 --border:#E7EDF5;
 
 --success:#2BB673;
-
+--transition:all .35s ease;
 }
 
 /* ==========================
@@ -118,6 +118,7 @@ backdrop-filter:blur(18px);
 
 transition:all .35s ease;
 
+   box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
 
 .nav-container{
@@ -571,6 +572,9 @@ box-shadow:0 10px 30px rgba(0,0,0,.04);
 
 transition:all .35s ease;
 
+   display:flex;
+flex-direction:column;
+height:100%;
 }
 
 .service-card::before{
@@ -600,19 +604,6 @@ transition:.45s;
 .service-card:hover::before{
 
 transform:scaleX(1);
-
-}
-background:#FFFFFF;
-
-padding:45px;
-
-border-radius:20px;
-
-border:1px solid var(--border);
-
-box-shadow:0 10px 30px rgba(0,0,0,.04);
-
-transition:all .35s ease;
 
 }
 
@@ -1317,7 +1308,13 @@ transform:translate(-50%,8px);
 
 }
 @media(max-width:1000px){
+.hero{
 
+min-height:100vh;
+
+padding:90px 0 50px;
+
+}
 .hero-container{
 
 grid-template-columns:1fr;
@@ -1332,7 +1329,17 @@ padding-bottom:100px;
 
 .hero-left{
 
-margin:auto;
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+animation:heroFade 1s ease forwards;
+
+opacity:0;
+
+padding-top:20px;
 
 }
 
@@ -1362,9 +1369,15 @@ font-size:19px;
 
 .hero-illustration{
 
-max-width:420px;
+width:100%;
 
-}
+max-width:620px;
+
+animation:floatAnimation 6s ease-in-out infinite;
+
+filter:
+drop-shadow(0 35px 70px rgba(0,0,0,.40))
+drop-shadow(0 0 40px rgba(63,169,245,.18));
 
 }
 /* ===================================
@@ -2196,6 +2209,90 @@ color:#74C3FF;
 body.menu-open{
 
 overflow:hidden;
+
+}
+
+}
+/* ==========================================
+SECTION OFFSET
+========================================== */
+
+section{
+
+scroll-margin-top:100px;
+
+}
+   @media(max-width:768px){
+
+.footer-links{
+
+text-align:center;
+
+}
+
+.footer-brand{
+
+text-align:center;
+
+}
+
+.footer-brand p{
+
+margin:auto;
+
+}
+
+
+ }     
+   /* ==========================================
+MOBILE TOUCH
+========================================== */
+
+*{
+
+-webkit-tap-highlight-color:transparent;
+
+}
+}
+/* ==========================================
+FOOTER MOBILE
+========================================== */
+
+@media (max-width:768px){
+
+.footer-top{
+
+display:flex;
+
+flex-direction:column;
+
+gap:40px;
+
+text-align:center;
+
+}
+
+.footer-brand{
+
+text-align:center;
+
+}
+
+.footer-brand p{
+
+margin:auto;
+
+max-width:450px;
+
+}
+
+.footer-bottom{
+
+flex-direction:column;
+
+gap:15px;
+
+text-align:center;
 
 }
 
