@@ -86,29 +86,37 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     /*==============================================
-    SMOOTH SCROLL
-    ==============================================*/
+SMOOTH SCROLL
+==============================================*/
 
-    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+document.querySelectorAll('a[href^="#"]').forEach(function(link){
 
-        link.addEventListener("click", function (e) {
+    link.addEventListener("click", function(e){
 
-            const target = document.querySelector(this.getAttribute("href"));
+        const target = document.querySelector(this.getAttribute("href"));
 
-            if (!target) return;
+        if(!target) return;
 
-            e.preventDefault();
+        e.preventDefault();
 
-            target.scrollIntoView({
+        const headerHeight = document.querySelector("header").offsetHeight;
 
-                behavior: "smooth"
+        const targetPosition =
+            target.getBoundingClientRect().top +
+            window.pageYOffset -
+            headerHeight;
 
-            });
+        window.scrollTo({
+
+            top: targetPosition,
+
+            behavior:"smooth"
 
         });
 
     });
 
+});
     /*==============================================
     SCROLL ANIMATIONS
     ==============================================*/
