@@ -136,22 +136,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
             e.preventDefault();
 
-            closeMenu();
+         const headerHeight = header ? header.offsetHeight : 0;
 
-            const headerHeight = header ? header.offsetHeight : 0;
+const offset =
+    target.getBoundingClientRect().top +
+    window.pageYOffset -
+    headerHeight;
 
-            const offset =
-                target.getBoundingClientRect().top +
-                window.pageYOffset -
-                headerHeight;
+window.scrollTo({
 
-            window.scrollTo({
+    top: offset,
 
-                top: offset,
+    behavior: "smooth"
 
-                behavior: "smooth"
+});
 
-            });
+// Esperar a que empiece el scroll antes de cerrar el menú
+setTimeout(() => {
+
+    closeMenu();
+
+}, 250);
 
         });
 
