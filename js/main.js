@@ -137,11 +137,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
             });
 
-            if (menu.classList.contains("active")) {
+            if (menu && menu.classList.contains("active")) {
 
-                setTimeout(closeMenu, 250);
+    requestAnimationFrame(() => {
 
-            }
+        closeMenu();
+
+    });
+
+}
 
         });
 
