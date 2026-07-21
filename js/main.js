@@ -122,32 +122,31 @@ document.addEventListener("DOMContentLoaded", () => {
     SMOOTH SCROLL
     ==============================================*/
 
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
+ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
 
-        link.addEventListener("click", function (e) {
+    link.addEventListener("click", function (e) {
 
-            const href = this.getAttribute("href");
+        console.log("CLICK:", this.getAttribute("href"));
 
-            if (href === "#") return;
+        const target = document.querySelector(this.getAttribute("href"));
 
-            const target = document.querySelector(href);
+        if (!target) {
 
-            if (!target) return;
+            console.log("NO ENCUENTRO LA SECCIÓN");
 
-            e.preventDefault();
+            return;
 
-         const headerHeight = header ? header.offsetHeight : 0;
+        }
 
-const offset =
-    target.getBoundingClientRect().top +
-    window.pageYOffset -
-    headerHeight;
+        e.preventDefault();
 
-window.scrollTo({
+        target.scrollIntoView({
 
-    top: offset,
+            behavior: "smooth"
 
-    behavior: "smooth"
+        });
+
+    });
 
 });
 
