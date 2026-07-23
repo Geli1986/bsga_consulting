@@ -1,9 +1,0 @@
-# ==========================================
-# BSGA CONSULTING
-# ==========================================
-
-User-agent: *
-
-Allow: /
-
-Sitemap: https://bsgaconsulting.es/sitemap.xml
